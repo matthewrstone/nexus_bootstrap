@@ -25,10 +25,11 @@ This is simply a Bolt task to bootstrap a Nexus OSS installation with an interna
     bolt task run nexus_bootstrap::configure -t myserver.contoso.com --transport winrm --no-ssl --user Administrator --password meepzorp
 
 Output will have a bunch of chocolatey messaging, then a hash of the following:
-  {
-      "password":  "422d3d65-539b-4e1d-8222-3bb29faddfc",
-      "apikey":  "d4f440a7-d454-34aa-9e8b-a56dc9f1bb8d"
-  }
+  
+    {
+        "password":  "422d3d65-539b-4e1d-8222-3bb29faddfc",
+        "apikey":  "d4f440a7-d454-34aa-9e8b-a56dc9f1bb8d"
+    }
 
   You can then connect to http://myserver.contoso.com:8081 with the username `admin` and password above. To push choco packages, supply the api key above.
 
